@@ -12,11 +12,13 @@ public class Program {
 		curso1.setDescricao(" Aprendendo POO");
 		curso1.setCargaHoraria(8);
 		
-		Mentoria mentoria = new Mentoria();
+		Mentoria mentoria1 = new Mentoria();
+		mentoria1.setTitulo("Zerando duvidas de POO");
+		mentoria1.setDescricao("entenda tudo sobre POO com Camila Calvacante");
+	
 		
 		
-		
-		System.out.println(curso1);
+		System.out.println(mentoria1.toString());
 	}
 
 }

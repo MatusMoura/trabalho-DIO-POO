@@ -1,55 +1,32 @@
 package com.matus.desfio.entities;
 
-public class Conteudo {
+public abstract class Conteudo {
+	
+	protected static final double XP_PADRAO = 10d;
+	
+	
+	private String titulo;
+	private String descricao;
+	
+	public abstract double calcularXp();
 
-	       public void eat() {
+	public String getTitulo() {
+		return titulo;
+	}
 
-	            System.out.print( "Animal eating;" );
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 
-	       }
+	public String getDescricao() {
+		return descricao;
+	}
 
-	  }
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	
 
-	  public class Dog  extends Conteudo {
-
-	       public void eat() {
-
-	            System.out.print( "Dog eating;" );
-
-	       }
-
-	  }
-	  public class Tiger extends Conteudo {
-
-	       public void eat() {
-
-	            System.out.print( "Tiger eating;" );
-
-	       }
-
-	  
-
-	    public void makeAnimalEat( Conteudo animal ) {
-
-	         animal.eat();
-
-	    }
-
-	    public static void main( String[] args ) {
-
-	          Main m = new Main();
-
-	          Conteudo animal = new Dog();
-
-	          m.makeAnimalEat((Conteudo) animal);
-
-	          m.makeAnimalEat(animal);
-
-	          animal = new Tiger();
-
-	          m.makeAnimalEat(animal);
-
-	     }
 
 	}
 
